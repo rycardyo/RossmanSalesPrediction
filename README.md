@@ -9,8 +9,19 @@ fundamental para definir este orçamneto de maneira mais assertiva, por isso, fo
 
 ## Etapas do projeto. 
 O projeto foi desenvolvido com a metodologia Crisp-DS, uma metodologia cíclica, que busca iterar sobre 9 ciclos, cada etapa do projeto, sendo elas: 
+   
+   1 . [Questão de negócio](1-questão-de-negócio)
+   2 . Entendimento do negócio]
+   3 . Coleta dos dados
+   4 . Limpeza dos dados 
+   5 . EDA - Analise exploratória dos dados
+   6 . Modelagem dos dados 
+   7 . Modelos de Machine Learning
+   8 . Avaliação e tunagem dos modelos de Machine Learning 
+   9 . Modelo em produção 
 
- ### 1-  Questão de negócio
+
+ ### 1 Questão de negócio
   - O projeto começa com uma indagação, do tipo quanto vamos vender nas próximas 6 semanas?
 
  ### 2 - Entendimento do Negócio. 
@@ -38,4 +49,23 @@ da maneira mais assertiva possível o budget para as reformas. Entender o proble
 **insights** gerados foram:
 - ...
 
-#### 6 - Modelagem dos dados. 
+### 6 - Modelagem dos dados. 
+  - É neste momento em que começamos realmente a pensar nos modelos de Machine Learning, aqui são podem ser construidas novas features (feature enginnering) assim transformações em nossos dados, nas quais podemos pensar em dois tipos de subdivisoes para nossas transformações:
+  
+  - **Orientadas ao fenomeno modelado (problema de negócio):**
+   -  As transformações aplicadas nas variaveis categoricas podem possuir como orientação inicial a busca por realizar transformações que sejam capazes de obter a menor perda possível de informação,
+     por exemplo, ao transformarmos os dias da semana em valores numeros de 1 a 7, perdemos a informação ciclica, de que o dia 7 (sabado) esta proximo ao dia 1 (domingo).
+  
+  - **Orientadas aos modelos de machine learning:**.
+   -Modelos de machine Learning são construídos com base em certas premissas, isso quer dizer, em certas características que os dados devem possuir, para que eles funcionem bem, exemplo:
+     - Modelos baseados em distância, como KNN, KMeans são modelos extremamente sensível as escalas dos dados de entrada, dados com escalas diferentes, enviesam o modelo a aprender mais de uma ou outra caracteristica, sendo necessário técnicas de normalização.
+     - A maiordos modelos de ML como KNN, RandomForest, Redes Neurais por exemplo, funcionam melhor quando os dados da variável objetivo apresentam uma distribuição normal.
+
+     Neste projeto, fora aplicado trnasformações de one hot encoding, transformações ciclcias de seno e cosseno e transformação logratimica na variavel alvo (sales).
+
+### 7 - Algoritmos de Machine Learning 
+
+### 8 - Avaliação do Algoritmo 
+
+### 9 - Deploy do Modelo
+
