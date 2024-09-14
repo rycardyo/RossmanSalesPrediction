@@ -21,4 +21,21 @@ da maneira mais assertiva possível o budget para as reformas. Entender o proble
   - Aqui que, efetivamente inicia-se a execução do projeto, para o nosso projeto, esta etapa foi realizada extraindo dos dados da base:
 
 ### 4 - Limpeza dos dados.
-  - 
+  - Nesta etapa buscamos entender a qualidade dos nossos dados respondendo algumas perguntas do tipo:
+   -  Quanto registros temos registros temos?
+   -  Quais estão nulos? Por que?
+    -  É possível preencher esses registros nulos? Se sim, como?
+   - Os dados estão realmente assertivos? Fazem sentido com a realidade/contexto do negócio (avaliação de coêrencia)
+     - Se os dados não estão assertivos, por que? Há erros no processo de lançamento das informações? Ou erros no processo de coleta dos dados?
+
+   - **A resposta de cada uma dessas perguntas, geralmente devem vir com uma proposta de solução para os problemas encontratos.**  
+
+   **Resultados**
+  Em nosso projeto, não fora possível avaliar a coerencia dos dados, uma vez que tratam-se de dados do kaggle, no entanto, foram identificados valores nulos, e utlizadas premissas de negócio para seu preenchimento, aqui também poderiam ser algumas técnicas estátisticas.   
+
+### 5 - Exploração dos dados: 
+  - Aqui que começa a real geração de valor para o negócio, com o entendimento dos fenomeno (vendas das lojas) e os fatores que o influenciam. Fora forumado um conjunto de hipóteses, cujo os princiapsi
+**insights** gerados foram:
+- ...
+
+#### 6 - Modelagem dos dados. 
