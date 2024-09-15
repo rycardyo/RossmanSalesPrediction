@@ -39,7 +39,7 @@ da maneira mais assertiva possível o budget para as reformas. Entender o proble
 ### 3 - Coleta dos dados. 
 Aqui que, efetivamente inicia-se a execução do projeto, para o nosso projeto, esta etapa foi realizada extraindo dos dados da base:
 
-### 4 - impeza dos dados.
+### 4 - Limpeza dos dados.
   Nesta etapa buscamos entender a qualidade dos nossos dados respondendo algumas perguntas do tipo:
   -  Quanto registros temos registros temos?
   -  Quais estão nulos? Por que?
