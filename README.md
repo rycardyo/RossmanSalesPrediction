@@ -10,13 +10,13 @@ fundamental para definir este orçamneto de maneira mais assertiva, por isso, fo
 ## Etapas do projeto. 
 O projeto foi desenvolvido com a metodologia Crisp-DS, uma metodologia cíclica, que busca iterar sobre 9 ciclos, cada etapa do projeto, sendo elas: 
    
-   1 . [Questão de negócio](#1-questão-de-negócio)
+   1 . [Questão de negócio](#1---questão-de-negócio)
 
-   2 . [Entendimento do negócio](#2-entendimento-do-negócio)
+   2 . [Entendimento do negócio](#2---entendimento-do-negócio)
 
-   3 . [Coleta dos dados](#3-coleta-dos-dados)
+   3 . [Coleta dos dados](#3---coleta-dos-dados)
 
-   4 . [Limpeza dos dados](#4-limpeza-dos-dados)
+   4 . [Limpeza dos dados](#4---impeza-dos-dados)
 
    5 . [EDA - Analise exploratória dos dados](#5---exploração-dos-dados)
 
@@ -29,17 +29,17 @@ O projeto foi desenvolvido com a metodologia Crisp-DS, uma metodologia cíclica,
    9 . [Modelo em produção](#9---deploy-do-modelo)
 
 
- ### 1 Questão de negócio
+ ### 1 - Questão de negócio
  O projeto começa com uma indagação, do tipo quanto vamos vender nas próximas 6 semanas?
 
- ### 2 Entendimento do Negócio. 
+ ### 2 - Entendimento do Negócio. 
  Toda questão de negócio surge a partir de uma dor, que em nosso caso é: como definir
 da maneira mais assertiva possível o budget para as reformas. Entender o problema real de negócio, ajuda-nos a saber se a questão de negócio, é realmente a mais adequada para lidar com aquela dor.
 
-### 3 Coleta dos dados. 
+### 3 - Coleta dos dados. 
 Aqui que, efetivamente inicia-se a execução do projeto, para o nosso projeto, esta etapa foi realizada extraindo dos dados da base:
 
-### 4 Limpeza dos dados.
+### 4 - impeza dos dados.
   Nesta etapa buscamos entender a qualidade dos nossos dados respondendo algumas perguntas do tipo:
   -  Quanto registros temos registros temos?
   -  Quais estão nulos? Por que?
@@ -55,7 +55,13 @@ Aqui que, efetivamente inicia-se a execução do projeto, para o nosso projeto, 
 ### 5 - Exploração dos dados: 
 Aqui que começa a real geração de valor para o negócio, com o entendimento dos fenomeno (vendas das lojas) e os fatores que o influenciam. Fora forumado um conjunto de hipóteses, cujo os princiapsi
 **insights** gerados foram:
-- ...
+ - 1 - Lojas do tipo "b", diariamente, possuem um faturamento superior às lojas dos tipos 'a', 'c' e 'd'
+ - 2 - A promo2 não eleva os valores de faturamento das lojas 
+ - 3 - A promo 1 eleva os valores de faturamento das lojas. 
+ - 4 - As vendas das lojas tem caído nos ultimos anos. 
+ - 5 - Os feriados escolares pouco influenciam no faturamen das lojas. 
+ - 6 - As vendas aumentam nos últimos dias da semana. 
+ 
 
 ### 6 - Modelagem dos dados. 
   É neste momento em que começamos realmente a pensar nos modelos de Machine Learning, aqui são podem ser construidas novas features (feature enginnering) assim transformações em nossos dados, nas quais podemos pensar em dois tipos de subdivisoes para nossas transformações:
@@ -74,9 +80,9 @@ Aqui que começa a real geração de valor para o negócio, com o entendimento d
   **Neste projeto, fora aplicado trnasformações de one hot encoding, transformações ciclcias de seno e cosseno e transformação logratimica na variavel alvo (sales).**
 
 ### 7 - Algoritmos de Machine Learning 
-  - Aqui são definidos alguns modelos de Machine learning, os quais são treinados com base nos dados ja tratados e transformandos, e, sua perfomance é comparada. 
-  A estratégica definido para este projeto fora identificar o modelo com o melhor custo x beneficiio (complexidade computacional vs desempenho), e selecionado o modelo
-  com a melhor relação. 
+ Aqui são definidos alguns modelos de Machine learning, os quais são treinados com base nos dados ja tratados e transformandos, e, sua perfomance é comparada. 
+ A estratégica definido para este projeto fora identificar o modelo com o melhor custo x beneficiio (complexidade computacional vs desempenho), e selecionado o modelo
+ com a melhor relação. 
 
   Foram treinados os seguintes modelos:
 
@@ -86,7 +92,7 @@ Aqui que começa a real geração de valor para o negócio, com o entendimento d
    -  2 Linear Regression 
    -  3 Lasso Linear Regression  (Regressão Linear Regularizada)
   
-  
+
   **Modelos Não Lineares**: 
 
    - 1 XGBoost   
@@ -95,7 +101,7 @@ Aqui que começa a real geração de valor para o negócio, com o entendimento d
   Destes, o modelo selecionado fora o XGBoost  
 
 ### 8 - Avaliação do Algoritmo 
-  - Após treinado, e pré avaliado (somente com base no primeiro subconjunto treino e teste) o modelo deve ser avaliado com base em um processo mais robusto, para evitar que vieses presentes no suboconjuto original de treino e teste, estejam influenciando na qualidade do modelo. Esta etapa é fundamental para avaliar se o modelo escolhido, é realmente capaz de a partir dos dados de treino, generalizar bem o fenomeno estudado, e, consequentemente gerar boas previsões para o fenomeno modelado. 
+Após treinado, e pré avaliado (somente com base no primeiro subconjunto treino e teste) o modelo deve ser avaliado com base em um processo mais robusto, para evitar que vieses presentes no suboconjuto original de treino e teste, estejam influenciando na qualidade do modelo. Esta etapa é fundamental para avaliar se o modelo escolhido, é realmente capaz de a partir dos dados de treino, generalizar bem o fenomeno estudado, e, consequentemente gerar boas previsões para o fenomeno modelado. 
 
   Nesta etapa, fora utilizado a técnica de K-Fold Validation, onde o conjunto original dos dados são subdividos em "k" subconjuntos de treino e teste distintos, e, a partir do desempenho  do modelo treinado e testado sob estes subconjuntos, obtemos uma visão mais clara do REAL desempenho do modelo. 
 
