@@ -8,11 +8,10 @@ import utils
 import sys  
 import os 
 
-api_path = os.path.abspath(__file__).replace('streamlit_actions.py','') + '../API'
+api_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../', 'API')
 sys.path.append(api_path)
-
-
-from API import model_pipeline as mp
+print(api_path)
+import model_pipeline as mp
 import plotly.graph_objects as go
 from datetime import timedelta
 # Controla se o modelo sera executado em uma API ou "localmente" com a aplicação 
