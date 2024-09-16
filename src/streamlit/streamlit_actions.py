@@ -6,9 +6,9 @@ import requests
 import load_data as ld
 import utils
 import sys 
-sys.path.append('../')
+sys.path.append('../API')
 
-from API import model_pipeline as mp
+import model_pipeline as mp
 import plotly.graph_objects as go
 from datetime import timedelta
 # Controla se o modelo sera executado em uma API ou "localmente" com a aplicação 
