@@ -8,7 +8,7 @@ import utils
 import sys 
 sys.path.append('../API')
 
-import API.model_pipeline as mp
+from API import model_pipeline as mp
 import plotly.graph_objects as go
 from datetime import timedelta
 # Controla se o modelo sera executado em uma API ou "localmente" com a aplicação 
