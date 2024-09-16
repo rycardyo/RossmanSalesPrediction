@@ -7,6 +7,11 @@ A Rossmann é uma das maiores redes de drograria da europa, e seu CEO deseja rea
 Para alcançar este objetivo, é necessário definir quanto de orçamento poderá ser reservado para a reforma de cada loja. Com isso em mente, ter a estimativa do valor a ser vendido por cada uma dessas lojas é 
 fundamental para definir o quanto poderá ser gasto de maneira mais assertiva, em razão disto, fora solicitado uma previsão do quanto cada loja irá obter de faturamento nas próximas 6 semanas. 
 
+## Resultados:
+
+ Como resultado, foi desenvolvido um preditor com XGBosst, com uma precisão de +/- 16% na previsão do valor a ser vendido por loja, o que indica que o modelo é capaz de prever o valor vendido de cada loja, com um desvio médio de +/- $ 1060,00. 
+ 
+
 ## Etapas do projeto. 
 O projeto foi desenvolvido com a metodologia Crisp-DM, uma metodologia cíclica, que busca iterar sobre 9 ciclos, cada etapa do projeto, sendo elas: 
    
