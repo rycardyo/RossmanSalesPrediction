@@ -5,8 +5,12 @@ import json
 import requests
 import load_data as ld
 import utils
-import sys 
-sys.path.append('../API')
+import sys  
+import os 
+
+api_path = os.path.abspath(__file__).replace('streamlit_actions.py','') + '../API'
+sys.path.append(api_path)
+
 
 from API import model_pipeline as mp
 import plotly.graph_objects as go
