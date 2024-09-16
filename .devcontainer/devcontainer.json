@@ -16,7 +16,7 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y < packages.txt; [ -f streamlitApp_requirements.txt ] && pip3 install --user -r streamlitApp_requirements.txt || echo 'No requirements file found'; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
+  "updateContentCommand": " echo '✅ Trying install customized requirements file'; [ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y < packages.txt; [ -f streamlitApp_requirements.txt ] && pip3 install --user -r streamlitApp_requirements.txt || echo 'No requirements file found'; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
   "postAttachCommand": {
     "server": "streamlit run src/streamlit/streamlit.py --server.enableCORS false --server.enableXsrfProtection false"
   },
