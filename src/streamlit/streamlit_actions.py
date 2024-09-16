@@ -6,7 +6,7 @@ import requests
 import load_data as ld
 import utils
 import sys 
-sys.append('../')
+sys.path.append('../')
 
 from API import model_pipeline as mp
 import plotly.graph_objects as go
