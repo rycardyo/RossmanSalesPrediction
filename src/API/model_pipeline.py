@@ -1,5 +1,5 @@
-from API import data_preparation 
-from API import model
+import data_preparation 
+import model
 import pandas as pd 
 
 modelo = model.XGB_sales_prediction()
