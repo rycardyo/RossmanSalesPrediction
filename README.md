@@ -1,5 +1,7 @@
 # Rosmann Predict Sales
 
+- Acesse o modelo via: https://ricardo-rossmansalesprediction-0.streamlit.app/
+
 ## Contextualização. 
 
 A Rossmann é uma das maiores redes de drograria da europa, e seu CEO deseja realizar uma reforma em suas lojas, com o objetivo de melhorar a experiência com o cliente. 
